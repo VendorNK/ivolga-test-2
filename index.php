@@ -21,8 +21,8 @@ function resizePng($source_image, $dest_image, $dst_width, $dst_height)
     imagedestroy($new_img);
 }
 
-$image = dirname(__FILE__) . '/image.png';
-$image_resize = dirname(__FILE__) . '/image-resize.png';
+$image = dirname(__FILE__) . '/img/image.png';
+$image_resize = dirname(__FILE__) . '/img/image-resize.png';
 
 if (!file_exists($image_resize)) resizePng($image, $image_resize, "200", "200");
 
@@ -44,7 +44,7 @@ if (!file_exists($image_resize)) resizePng($image, $image_resize, "200", "200");
             height: 100px;
             margin: 100px auto;
             background-color: #fff;
-            background-image: url(image-resize.png);
+            background-image: url(/img/image-resize.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
