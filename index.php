@@ -1,6 +1,6 @@
 <?php
 
-ini_set('memory_limit', '3000M');
+ini_set('memory_limit', '5000M');
 set_time_limit(60);
 
 // Изменение размера изображний PNG
