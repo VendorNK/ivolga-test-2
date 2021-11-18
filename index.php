@@ -24,7 +24,7 @@ function resizePng($source_image, $dest_image, $dst_width, $dst_height)
 $image = dirname(__FILE__) . '/image.png';
 $image_resize = dirname(__FILE__) . '/image-resize.png';
 
-if(!file_exists($image_resize)) resizePng($image, $image_resize, "200", "100");
+if (!file_exists($image_resize)) resizePng($image, $image_resize, "200", "200");
 
 ?>
 <!DOCTYPE html>
@@ -36,15 +36,36 @@ if(!file_exists($image_resize)) resizePng($image, $image_resize, "200", "100");
     <title>2. Веб-разработка</title>
     <style>
         body {
-            background-color: #cecece;;
+            background-color: #efefef;
+            ;
         }
-        img {
-            display: block;
+        .banner {
+            width: 200px;
+            height: 100px;
             margin: 100px auto;
+            background-color: #fff;
+            background-image: url(image-resize.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .banner span {
+            text-transform: uppercase;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <img src="image-resize.png" alt="">
+    <div class="banner">
+        <span>Баннер</span>
+    </div>
 </body>
 </html>
